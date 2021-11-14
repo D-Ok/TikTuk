@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import {Link, Button} from '@mui/material'
+import {getTrendingFeed} from "./requests";
+import InfoIcon from "./components/InfoIcon/InfoIcon";
+import Hashtag from "./components/Hashtag/Hashtag";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Hello
+        <Link href="#">Link</Link>
+        <Button variant="contained" onClick={getTrendingFeed}>Contained</Button>
+      <div>
+        <InfoIcon />
+          <InfoIcon icon={'forum'} color={'primary'} number={12999}/>
+          <Hashtag name={'hashtag'}/>
+      </div>
     </div>
   );
 }
