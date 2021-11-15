@@ -3,6 +3,7 @@ import {Link, Button} from '@mui/material'
 import {getTrendingFeed} from "./requests";
 import InfoIcon from "./components/InfoIcon/InfoIcon";
 import Hashtag from "./components/Hashtag/Hashtag";
+import AvatarLink from "./components/AvatarLink/AvatarLink";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <InfoIcon />
           <InfoIcon icon={'forum'} color={'primary'} number={12999}/>
           <Hashtag name={'hashtag'}/>
+          <AvatarLink/>
       </div>
     </div>
   );

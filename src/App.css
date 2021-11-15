@@ -1,4 +1,5 @@
 @import 'components/InfoIcon/InfoIcon.css';
+@import 'components/AvatarLink/AvaterLink.css';
 
 .App {
   text-align: center;
