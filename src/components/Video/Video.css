@@ -1,0 +1,16 @@
+.video-container{
+    position: relative;
+    display: inline-flex
+}
+
+.video-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.video-button .--display{
+    display: block;
+}

@@ -1,4 +1,6 @@
 export const numberToText = (number) => {
+    if(!number)
+        return
     switch (true){
         case number<1000:
             return number;

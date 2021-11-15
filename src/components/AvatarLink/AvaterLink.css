@@ -1,4 +1,19 @@
 .avatar-link-container{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.avatar-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.avatar-icon{
+    margin: 0.5rem;
+}
+
+.avatar-nickname{
+    font-size: small;
 }
