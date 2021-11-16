@@ -1,16 +1,39 @@
 import { useParams } from "react-router";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+import axios from "axios";
+import {options} from "../../requests";
+import {GLOBAL_CONSTANTS} from "../../constants";
+import UserProfile from "../../components/UserProfile/UserProfile";
 
+const {USER_INFO, USER_FEED} = GLOBAL_CONSTANTS.API.URLS;
 const UserDetails = () => {
     let { uniqueId } = useParams();
+    const [userInfo, setUserInfo] = useState(null);
 
+    const getUserInfo = () => {
+        axios.request(options(USER_INFO + uniqueId)).then(function (response) {
+            setUserInfo(response.data);
+        }).catch(function (error) {
+            console.error(error);
+        });
+    }
+
+    const getUserFeed = () => {
+        axios.request(options(USER_FEED + uniqueId)).then(function (response) {
+            console.log(response.data);
+        }).catch(function (error) {
+            console.error(error);
+        });
+    }
     useEffect(() => {
-        console.log(uniqueId)
-        // Fetch post using the postSlug
+        getUserInfo();
+        getUserFeed();
     }, [uniqueId]);
 
     return (
-        <div>User {nickname}</div>
+        <div>
+            <UserProfile {...userInfo}/>
+        </div>
     )
 }
 

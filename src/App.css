@@ -2,6 +2,7 @@
 @import 'components/AvatarLink/AvaterLink.css';
 @import 'components/Video/Video.css';
 @import 'components/Post/Post.css';
+@import "components/UserProfile/UserProfile.css";
 
 .App {
   text-align: center;

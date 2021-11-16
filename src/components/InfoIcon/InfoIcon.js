@@ -4,18 +4,21 @@ import Icon from '@mui/material/Icon';
 import {numberToText} from "./utils";
 import classnames from 'classnames';
 
-const InfoIcon = ({className, icon, number, color, text, fontSize, iconSize}) => {
+const InfoIcon = ({disabled, className, icon, number, color, text, fontSize, iconSize}) => {
 
     const sxObj =  iconSize ? {fontSize: iconSize} : {}
-   const textNumber = text || numberToText(number)
+   const textNumber = numberToText(number)
     return (
         <IconButton
+            disableRipple={disabled}
+            disableFocusRipple={disabled}
             color={color}
             aria-label="upload picture"
             component="span"
             className={classnames(className, 'info-icon-container')}
         >
             <Icon fontSize={fontSize}  sx={sxObj}>{icon}</Icon>
+            {text && <span className='info-icon-text'>{text}:</span>}
             {textNumber && <span className='info-icon-text'>{textNumber}</span>}
         </IconButton>
     );
@@ -35,7 +38,8 @@ InfoIcon.propTypes = {
     'success', 'warning']),
     fontSize: propTypes.oneOf(['inherit', 'large', 'medium', 'small']),
     iconSize: propTypes.number,
-    className: propTypes.string
+    className: propTypes.string,
+    disabled: propTypes.bool
 }
 
 export default InfoIcon;

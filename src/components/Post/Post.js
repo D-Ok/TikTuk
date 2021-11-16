@@ -7,9 +7,9 @@ import AvatarLink from "../AvatarLink/AvatarLink";
 import {useEffect, useState} from "react";
 import {calculateHeight} from "./utils";
 import Typography from "@mui/material/Typography";
-import {Divider} from "@mui/material";
 
-const Post = ({duration, height, width, videoUrl}) => {
+const Post = (props) => {
+    const {videoUrl, videoMeta, text, authorMeta, diggCount, commentCount, hashtags} = props
     const [postHeight, setPostHeight] = useState(300);
 
     useEffect(() => {
@@ -22,18 +22,25 @@ const Post = ({duration, height, width, videoUrl}) => {
         width: (postHeight*9)/8 + 20
     }
 
+    if(!videoMeta)
+        return <></>;
+
     return (
         <div className={'post-container'} style={postStyles}>
-            <Video/>
+            <Video {...videoMeta} videoUrl={videoUrl}/>
             <div className={'post-info-container'}>
-                <AvatarLink/>
+                {authorMeta && <AvatarLink {...authorMeta}/>}
+
                 <hr className={'post-divider'}/>
-                <Typography variant="body1" component="div" className={'post-text'}>Text Text textf ggggyg gh ghjg yggk kjh uhuhk jhjh k</Typography>
-                <div style={{flexGrow: 1}}><Hashtag name={"hello"}/><Hashtag name={"tag"}/></div>
+                <Typography variant="body1" component="div" className={'post-text'}>{text}</Typography>
+                <div className={'post-hashtags'}>
+                    {hashtags.map( ({id, name}) => <Hashtag name={name} key={id}/>)}
+                </div>
+
                 <hr className={'post-divider'}/>
                 <div className={'post-reactions'}>
-                    <InfoIcon number={12666999}/>
-                    <InfoIcon icon={'forum'} color={'primary'} number={12999}/>
+                    <InfoIcon number={diggCount}/>
+                    <InfoIcon icon={'forum'} color={'primary'} number={commentCount}/>
                 </div>
             </div>
         </div>
@@ -41,17 +48,26 @@ const Post = ({duration, height, width, videoUrl}) => {
 }
 
 Post.defaultProps = {
-    duration: 11,
-    height: 1024,
-    width: 576,
-    videoUrl: "https://v39-eu.tiktokcdn.com/a2144d6d51de21e456077881018c5f87/61930025/video/tos/useast2a/tos-useast2a-ve-0068c004/c5f6c64a47b04ecd91168fd9d921009c/?a=1233&br=2536&bt=1268&cd=0%7C0%7C1&ch=0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&ft=wZ~R_F5qkag3-I&l=2021111518492901019021807024301368&lr=tiktok_m&mime_type=video_mp4&net=0&pl=0&qs=0&rc=amxqNjQ6ZjtkNzMzNzczM0ApMzo6OTo1NGU1Nzk2OzczO2dxc2ZzcjRfNGxgLS1kMTZzc2BeMjQxNC02XjUwLS8uYjA6Yw%3D%3D&vl=&vr=",
+    hashtags: [],
+    diggCount: 0,
+    commentCount: 0
 }
 
 Post.propTypes = {
-    duration: propTypes.number,
-    height: propTypes.number,
-    width: propTypes.number,
-    videoUrl: propTypes.string
+    videoMeta: propTypes.shape({
+        duration: propTypes.number,
+        height: propTypes.number,
+        width: propTypes.number,
+    }),
+    videoUrl: propTypes.string,
+    authorMeta: propTypes.objectOf(AvatarLink),
+    text: propTypes.string,
+    diggCount: propTypes.number,
+    commentCount: propTypes.number,
+    hashtags: propTypes.arrayOf(propTypes.shape({
+        id: propTypes.string,
+        name: propTypes.string
+    }))
 }
 
 export default Post;

@@ -2,18 +2,17 @@ import propTypes from "prop-types";
 import InfoIcon from "../InfoIcon/InfoIcon";
 import {useEffect, useRef, useState} from "react";
 import classnames from 'classnames';
-import {calculateHeight} from "./utils";
+import {useInView} from "react-intersection-observer";
 
 const Video = ({duration, height, width, videoUrl, className}) => {
-    const [videoHeight, setVideoHeight] = useState('100%')
     const [isPlay, setIsPlay] = useState(false);
     const [displayButton, setDisplayButton] = useState(false);
-    const videoElement = useRef(null);
+    const videoElement = useRef(null)
+    const { ref, inView, entry } = useInView({
+        rootMargin: '40px',
+        triggerOnce: true
+    });
 
-
-    const videoStyles = {
-        height: videoHeight
-    }
     const containerClasses = classnames(
         'video-container',
         {className}
@@ -29,8 +28,8 @@ const Video = ({duration, height, width, videoUrl, className}) => {
     }
 
     return (
-        <div className={containerClasses} onClick={onVideoClick} style={videoStyles}>
-            <video src = {videoUrl} ref={videoElement} controls> </video>
+        <div className={containerClasses} onClick={onVideoClick} ref={ref}>
+            <video src = {inView ? videoUrl: ''} ref={videoElement} controls > </video>
             <div className={buttonClasses} >
                 <InfoIcon color={'default'} icon={'play_arrow'} iconSize={100}/>
             </div>
