@@ -2,7 +2,7 @@ import propTypes from "prop-types";
 import {Link} from "@mui/material";
 
 const Hashtag = ({name}) => {
-    return <Link component="button" href="#" disabled underline={'hover'}>#{name}</Link>
+    return <span><Link component="button" href="#" disabled underline={'hover'}>#{name}</Link> </span>
 }
 
 Hashtag.defaultProps = {

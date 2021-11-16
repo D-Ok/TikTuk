@@ -1,13 +1,23 @@
 import propTypes from "prop-types";
 import InfoIcon from "../InfoIcon/InfoIcon";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import classnames from 'classnames';
+import {calculateHeight} from "./utils";
 
-const Video = ({duration, height, width, videoUrl}) => {
+const Video = ({duration, height, width, videoUrl, className}) => {
+    const [videoHeight, setVideoHeight] = useState('100%')
     const [isPlay, setIsPlay] = useState(false);
     const [displayButton, setDisplayButton] = useState(false);
     const videoElement = useRef(null);
 
+
+    const videoStyles = {
+        height: videoHeight
+    }
+    const containerClasses = classnames(
+        'video-container',
+        {className}
+    )
     const buttonClasses = classnames(
         'video-button',
         {'--display': displayButton}
@@ -19,7 +29,7 @@ const Video = ({duration, height, width, videoUrl}) => {
     }
 
     return (
-        <div className={'video-container'} onClick={onVideoClick}>
+        <div className={containerClasses} onClick={onVideoClick} style={videoStyles}>
             <video src = {videoUrl} ref={videoElement} controls> </video>
             <div className={buttonClasses} >
                 <InfoIcon color={'default'} icon={'play_arrow'} iconSize={100}/>
@@ -39,7 +49,8 @@ Video.propTypes = {
     duration: propTypes.number,
     height: propTypes.number,
     width: propTypes.number,
-    videoUrl: propTypes.string
+    videoUrl: propTypes.string,
+    className: propTypes.string
 }
 
 export default Video;

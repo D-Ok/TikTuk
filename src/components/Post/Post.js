@@ -4,17 +4,37 @@ import Video from "../Video/Video";
 import Hashtag from "../Hashtag/Hashtag";
 import InfoIcon from "../InfoIcon/InfoIcon";
 import AvatarLink from "../AvatarLink/AvatarLink";
+import {useEffect, useState} from "react";
+import {calculateHeight} from "./utils";
+import Typography from "@mui/material/Typography";
+import {Divider} from "@mui/material";
 
 const Post = ({duration, height, width, videoUrl}) => {
+    const [postHeight, setPostHeight] = useState(300);
+
+    useEffect(() => {
+        let postHeight = calculateHeight();
+        setPostHeight(postHeight);
+    }, [])
+
+    const postStyles = {
+        height: postHeight,
+        width: (postHeight*9)/8 + 20
+    }
+
     return (
-        <div className={'post-container'}>
+        <div className={'post-container'} style={postStyles}>
             <Video/>
-            <AvatarLink/>
-            <span>Text Text text</span>
-            <div><Hashtag name={"hello"}/><Hashtag name={"tag"}/></div>
-            <div>
-                <InfoIcon/>
-                <InfoIcon icon={'forum'} color={'primary'} number={12999}/>
+            <div className={'post-info-container'}>
+                <AvatarLink/>
+                <hr className={'post-divider'}/>
+                <Typography variant="body1" component="div" className={'post-text'}>Text Text textf ggggyg gh ghjg yggk kjh uhuhk jhjh k</Typography>
+                <div style={{flexGrow: 1}}><Hashtag name={"hello"}/><Hashtag name={"tag"}/></div>
+                <hr className={'post-divider'}/>
+                <div className={'post-reactions'}>
+                    <InfoIcon number={12666999}/>
+                    <InfoIcon icon={'forum'} color={'primary'} number={12999}/>
+                </div>
             </div>
         </div>
     );
