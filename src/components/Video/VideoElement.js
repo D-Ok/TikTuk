@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import {useInView} from "react-intersection-observer";
 
 const VideoElement = ({videoUrl, isLoad, playOnView, muted }) => {
-    const [isPlay, setIsPlay] = useState(isLoad && playOnView);
+    const [isPlay, setIsPlay] = useState(false);
     const videoElement = useRef(null)
 
     const { ref, inView, entry } = useInView({
@@ -21,10 +21,9 @@ const VideoElement = ({videoUrl, isLoad, playOnView, muted }) => {
         if(!playOnView || !isPlay )
             return;
 
-        if(inView ){
-            console.log(entry)
+        if(inView )
             videoElement.current.play();
-        } else
+        else
             videoElement.current.pause();
 
     }, [inView, playOnView, videoUrl, isPlay, entry])
@@ -40,7 +39,7 @@ const VideoElement = ({videoUrl, isLoad, playOnView, muted }) => {
 
     const buttonClasses = classnames(
         'video-button',
-        {'--display': !isPlay && isLoad}
+        {'--display': playOnView && !isPlay && isLoad }
     );
 
     return (

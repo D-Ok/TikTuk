@@ -23,7 +23,6 @@ const UserDetails = () => {
     const getUserFeed = () => {
         //USER_FEED + uniqueId
         axios.request(options(TRENDING_FEED)).then(function (response) {
-            console.log(response.data);
             setVideos(response.data);
         }).catch(function (error) {
             console.error(error);
