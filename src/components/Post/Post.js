@@ -27,7 +27,7 @@ const Post = (props) => {
 
     return (
         <div className={'post-container'} style={postStyles}>
-            <Video {...videoMeta} videoUrl={videoUrl}/>
+            <Video {...videoMeta} videoUrl={videoUrl} playOnView/>
             <div className={'post-info-container'}>
                 {authorMeta && <AvatarLink {...authorMeta}/>}
 

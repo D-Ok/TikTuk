@@ -23,11 +23,24 @@
 
 .video-grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 1rem;
     max-width: 100%;
-    margin: 1rem;
+    margin: 1rem 12%;
 }
+
+@media screen and (max-width: 1300px){
+    .video-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .video-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 .user-video-display{
     margin-left: auto;
