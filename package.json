@@ -1,7 +1,7 @@
 {
   "name": "tik-tuk",
   "version": "0.1.0",
-  "homepage": "https://d-ok.github.io/tiktuk",
+  "homepage": "https://d-ok.github.io/TikTuk",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.6.0",
