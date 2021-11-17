@@ -1,0 +1,40 @@
+.user-video-container{
+    position: relative;
+}
+
+.user-video-info{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    font-size: large;
+}
+
+.user-video-info span{
+    margin-left: 0.25rem;
+}
+
+.video-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    max-width: 100%;
+    margin: 1rem;
+}
+
+.user-video-display{
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
+
+.user-video-display video{
+    width: 100%;
+}

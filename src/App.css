@@ -3,6 +3,7 @@
 @import 'components/Video/Video.css';
 @import 'components/Post/Post.css';
 @import "components/UserProfile/UserProfile.css";
+@import "components/VideoGrid/VideoGrid.css";
 
 .App {
   text-align: center;
