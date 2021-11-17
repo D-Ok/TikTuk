@@ -4,14 +4,24 @@ import {useEffect, useRef, useState} from "react";
 import classnames from 'classnames';
 import {useInView} from "react-intersection-observer";
 
-const Video = ({duration, height, width, videoUrl, className, controls}) => {
+const Video = ({playOnView, videoUrl, className, controls}) => {
     const [isPlay, setIsPlay] = useState(false);
     const [displayButton, setDisplayButton] = useState(false);
     const videoElement = useRef(null)
     const { ref, inView, entry } = useInView({
-        rootMargin: '40px',
-        triggerOnce: true
+        rootMargin: '100px',
+       // triggerOnce: true
     });
+
+    useEffect(()=>{
+        if(inView){
+            console.log(true, videoUrl)
+            videoElement.current.play();
+        } else {
+            videoElement.current.pause();
+            console.log(false, videoUrl)
+        }
+    }, [inView, videoElement])
 
     const containerClasses = classnames(
         {[className]: true},
@@ -52,7 +62,8 @@ Video.propTypes = {
     width: propTypes.number,
     videoUrl: propTypes.string,
     className: propTypes.string,
-    controls: propTypes.bool
+    controls: propTypes.bool,
+    playOnView: propTypes.bool
 }
 
 export default Video;
