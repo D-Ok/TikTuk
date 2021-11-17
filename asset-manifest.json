@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/tiktuk/static/css/main.ee0c2bc5.chunk.css",
-    "main.js": "/tiktuk/static/js/main.ad39a3f9.chunk.js",
-    "main.js.map": "/tiktuk/static/js/main.ad39a3f9.chunk.js.map",
-    "runtime-main.js": "/tiktuk/static/js/runtime-main.d5b308b9.js",
-    "runtime-main.js.map": "/tiktuk/static/js/runtime-main.d5b308b9.js.map",
-    "static/js/2.6ae105b9.chunk.js": "/tiktuk/static/js/2.6ae105b9.chunk.js",
-    "static/js/2.6ae105b9.chunk.js.map": "/tiktuk/static/js/2.6ae105b9.chunk.js.map",
-    "index.html": "/tiktuk/index.html",
-    "static/css/main.ee0c2bc5.chunk.css.map": "/tiktuk/static/css/main.ee0c2bc5.chunk.css.map",
-    "static/js/2.6ae105b9.chunk.js.LICENSE.txt": "/tiktuk/static/js/2.6ae105b9.chunk.js.LICENSE.txt"
+    "main.css": "/TikTuk/static/css/main.ee0c2bc5.chunk.css",
+    "main.js": "/TikTuk/static/js/main.ad39a3f9.chunk.js",
+    "main.js.map": "/TikTuk/static/js/main.ad39a3f9.chunk.js.map",
+    "runtime-main.js": "/TikTuk/static/js/runtime-main.a66b6061.js",
+    "runtime-main.js.map": "/TikTuk/static/js/runtime-main.a66b6061.js.map",
+    "static/js/2.6ae105b9.chunk.js": "/TikTuk/static/js/2.6ae105b9.chunk.js",
+    "static/js/2.6ae105b9.chunk.js.map": "/TikTuk/static/js/2.6ae105b9.chunk.js.map",
+    "index.html": "/TikTuk/index.html",
+    "static/css/main.ee0c2bc5.chunk.css.map": "/TikTuk/static/css/main.ee0c2bc5.chunk.css.map",
+    "static/js/2.6ae105b9.chunk.js.LICENSE.txt": "/TikTuk/static/js/2.6ae105b9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d5b308b9.js",
+    "static/js/runtime-main.a66b6061.js",
     "static/js/2.6ae105b9.chunk.js",
     "static/css/main.ee0c2bc5.chunk.css",
     "static/js/main.ad39a3f9.chunk.js"
