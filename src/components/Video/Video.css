@@ -1,4 +1,4 @@
-.video-container{
+.video-container {
     position: relative;
     display: flex;
     max-height: 100%;
@@ -7,7 +7,7 @@
     //margin: auto;
 }
 
-.video-element-container{
+.video-element-container {
     overflow: hidden;
     display: inline-flex;
     margin: 0 auto;
@@ -15,7 +15,7 @@
     max-width: 100%;
 }
 
-.video-button{
+.video-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,6 +23,6 @@
     display: none;
 }
 
-.video-button.--display{
+.video-button.--display {
     display: block;
 }

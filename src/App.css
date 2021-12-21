@@ -2,12 +2,10 @@
 @import 'components/AvatarLink/AvaterLink.css';
 @import 'components/Video/Video.css';
 @import 'components/Post/Post.css';
-@import "components/UserProfile/UserProfile.css";
-@import "components/VideoGrid/VideoGrid.css";
+@import 'components/UserProfile/UserProfile.css';
+@import 'components/VideoGrid/VideoGrid.css';
 
 .App {
-  text-align: center;
-  margin-top: 64px;
+    text-align: center;
+    margin-top: 64px;
 }
-
-

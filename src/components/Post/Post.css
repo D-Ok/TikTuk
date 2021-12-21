@@ -1,4 +1,4 @@
-.post-container{
+.post-container {
     display: flex;
     justify-content: space-between;
     margin: 5% auto;
@@ -6,7 +6,7 @@
     background: #cce5ff;
 }
 
-.post-info-container{
+.post-info-container {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -17,24 +17,24 @@
     margin-left: 0.75rem;
 }
 
-.post-text{
+.post-text {
     padding: 0.5rem 0 0;
     text-align: start;
 }
 
-.post-reactions{
+.post-reactions {
     display: flex;
     justify-content: space-around;
     align-self: center;
 }
 
-.post-divider{
+.post-divider {
     width: 100%;
     border: none;
     border-bottom: #cce5ff solid;
 }
 
-.post-hashtags{
+.post-hashtags {
     padding-top: 0.5rem;
     flex-grow: 1;
     text-align: start;

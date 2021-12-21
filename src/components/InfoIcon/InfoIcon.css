@@ -1,8 +1,8 @@
-.info-icon-container{
+.info-icon-container {
     flex-wrap: wrap;
 }
 
-.info-icon-text{
+.info-icon-text {
     flex-basis: 100%;
     font-size: small;
 }

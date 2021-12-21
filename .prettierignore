@@ -1,0 +1,11 @@
+build/
+public/
+node_modules/
+
+.eslintrc.json
+README.md
+package-lock.json
+package.json
+
+.idea/
+*.css

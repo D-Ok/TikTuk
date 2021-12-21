@@ -1,8 +1,8 @@
-.user-video-container{
+.user-video-container {
     position: relative;
 }
 
-.user-video-info{
+.user-video-info {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -12,16 +12,16 @@
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     font-size: large;
 }
 
-.user-video-info span{
+.user-video-info span {
     margin-left: 0.25rem;
 }
 
-.video-grid{
+.video-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1rem;
@@ -29,25 +29,24 @@
     margin: 1rem 12%;
 }
 
-@media screen and (max-width: 1300px){
-    .video-grid{
+@media screen and (max-width: 1300px) {
+    .video-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media screen and (max-width: 800px){
-    .video-grid{
+@media screen and (max-width: 800px) {
+    .video-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-
-.user-video-display{
+.user-video-display {
     margin-left: auto;
     margin-right: auto;
-    display: block
+    display: block;
 }
 
-.user-video-display video{
+.user-video-display video {
     width: 100%;
 }

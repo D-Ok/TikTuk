@@ -1,0 +1,16 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/react,node,webstorm
+# Edit at https://www.toptal.com/developers/gitignore?templates=react,node,webstorm
+
+build/
+public/
+node_modules/
+
+.eslintrc.json
+README.md
+package-lock.json
+package.json
+
+.idea/
+*.css
+*.test.js
