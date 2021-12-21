@@ -32,7 +32,8 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
         "lint": "eslint . --ext .js --ext .jsx",
-        "lint-fix": "eslint . --ext .js --ext .jsx --fix"
+        "lint-fix": "eslint . --ext .js --ext .jsx --fix",
+        "commit": "commit"
     },
     "eslintConfig": {
         "extends": [
@@ -54,6 +55,8 @@
     },
     "devDependencies": {
         "@commitlint/cli": "^15.0.0",
+        "@commitlint/config-conventional": "^15.0.0",
+        "@commitlint/prompt-cli": "^15.0.0",
         "eslint": "^7.32.0",
         "eslint-config-airbnb": "^19.0.2",
         "eslint-plugin-import": "^2.25.3",
