@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/react,node,webstorm
 # Edit at https://www.toptal.com/developers/gitignore?templates=react,node,webstorm
 
+.idea/
+build/
+
 ### Node ###
 # Logs
 logs
