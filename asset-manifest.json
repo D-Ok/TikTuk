@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/TikTuk/static/css/main.022de30c.chunk.css",
-    "main.js": "/TikTuk/static/js/main.cea593c4.chunk.js",
-    "main.js.map": "/TikTuk/static/js/main.cea593c4.chunk.js.map",
+    "main.css": "/TikTuk/static/css/main.bc693275.chunk.css",
+    "main.js": "/TikTuk/static/js/main.3bd791a7.chunk.js",
+    "main.js.map": "/TikTuk/static/js/main.3bd791a7.chunk.js.map",
     "runtime-main.js": "/TikTuk/static/js/runtime-main.a66b6061.js",
     "runtime-main.js.map": "/TikTuk/static/js/runtime-main.a66b6061.js.map",
-    "static/js/2.46332bce.chunk.js": "/TikTuk/static/js/2.46332bce.chunk.js",
-    "static/js/2.46332bce.chunk.js.map": "/TikTuk/static/js/2.46332bce.chunk.js.map",
+    "static/js/2.d0f2c14d.chunk.js": "/TikTuk/static/js/2.d0f2c14d.chunk.js",
+    "static/js/2.d0f2c14d.chunk.js.map": "/TikTuk/static/js/2.d0f2c14d.chunk.js.map",
     "index.html": "/TikTuk/index.html",
-    "static/css/main.022de30c.chunk.css.map": "/TikTuk/static/css/main.022de30c.chunk.css.map",
-    "static/js/2.46332bce.chunk.js.LICENSE.txt": "/TikTuk/static/js/2.46332bce.chunk.js.LICENSE.txt"
+    "static/css/main.bc693275.chunk.css.map": "/TikTuk/static/css/main.bc693275.chunk.css.map",
+    "static/js/2.d0f2c14d.chunk.js.LICENSE.txt": "/TikTuk/static/js/2.d0f2c14d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a66b6061.js",
-    "static/js/2.46332bce.chunk.js",
-    "static/css/main.022de30c.chunk.css",
-    "static/js/main.cea593c4.chunk.js"
+    "static/js/2.d0f2c14d.chunk.js",
+    "static/css/main.bc693275.chunk.css",
+    "static/js/main.3bd791a7.chunk.js"
   ]
 }
